@@ -1,0 +1,8 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/com/inditex/filemanager/domain/model/Asset.java
+src/main/java/com/inditex/filemanager/domain/model/AssetFileUploadRequest.java
+src/main/java/com/inditex/filemanager/domain/model/AssetFileUploadResponse.java
+src/main/java/com/inditex/filemanager/infrastructure/api/controllers/ApiApi.java
+src/main/java/com/inditex/filemanager/infrastructure/api/controllers/ApiUtil.java

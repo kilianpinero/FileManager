@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.inditex.filemanager.infrastructure.persistence.repository.AssetRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-15T09:07:06.994Z" hostname="PLX3000003534" time="0.461">
+  <properties/>
+  <testcase name="when_saveAsset_then_returnAsset()" classname="com.inditex.filemanager.infrastructure.persistence.repository.AssetRepositoryTest" time="0.461"/>
+  <system-out><![CDATA[2025-10-15T11:07:06.960+02:00  INFO 24888 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.inditex.filemanager.infrastructure.persistence.repository.AssetRepositoryTest]: AssetRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15T11:07:06.987+02:00  INFO 24888 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.inditex.filemanager.FilemanagerApplication for test class com.inditex.filemanager.infrastructure.persistence.repository.AssetRepositoryTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

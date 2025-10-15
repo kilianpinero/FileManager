@@ -1,0 +1,89 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.6'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'org.asciidoctor.jvm.convert' version '3.3.2'
+    id "org.openapi.generator" version "7.16.0"
+}
+
+group = 'com.inditex'
+version = '0.0.1-SNAPSHOT'
+description = 'filemanager'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('snippetsDir', file("build/generated-snippets"))
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13"
+    implementation "io.swagger.core.v3:swagger-annotations-jakarta:2.2.38"
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+    implementation 'org.openapitools:jackson-databind-nullable:0.2.6'
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+    implementation 'io.github.resilience4j:resilience4j-spring-boot3:2.2.0'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    testImplementation "com.h2database:h2"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+}
+
+openApiGenerate {
+    generatorName = "spring"
+    inputSpec = "$rootDir/src/main/resources/openapi.yml"
+    outputDir = layout.buildDirectory.dir("generated").get().asFile.toString()
+    apiPackage = "com.inditex.filemanager.infrastructure.api.controllers"
+    modelPackage = "com.inditex.filemanager.domain.model"
+    configOptions = [
+            dateLibrary: "java21",
+            interfaceOnly: "true",
+            useJakartaEe: "true"
+    ]
+}
+
+
+sourceSets {
+    main {
+        java {
+            srcDir layout.buildDirectory.dir("generated/src/main/java").get().asFile.toString()
+        }
+    }
+}
+
+tasks.named('test') {
+    outputs.dirs snippetsDir
+    useJUnitPlatform()
+}
+
+tasks.named('asciidoctor') {
+    inputs.dir snippetsDir
+    dependsOn test
+}
+
+compileJava.dependsOn tasks.named("openApiGenerate")

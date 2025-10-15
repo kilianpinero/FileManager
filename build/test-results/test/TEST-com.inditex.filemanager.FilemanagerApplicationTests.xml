@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.inditex.filemanager.FilemanagerApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-15T09:07:05.893Z" hostname="PLX3000003534" time="0.441">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.inditex.filemanager.FilemanagerApplicationTests" time="0.441"/>
+  <system-out><![CDATA[11:06:54.333 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.inditex.filemanager.FilemanagerApplicationTests]: FilemanagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:06:54.719 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.inditex.filemanager.FilemanagerApplication for test class com.inditex.filemanager.FilemanagerApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-15T11:06:55.857+02:00  INFO 24888 --- [    Test worker] c.i.f.FilemanagerApplicationTests        : Starting FilemanagerApplicationTests using Java 21 with PID 24888 (started by kilian.pineroalonso in C:\Proyectos\pruebaTecnica_inditex\filemanager)
+2025-10-15T11:06:55.857+02:00  INFO 24888 --- [    Test worker] c.i.f.FilemanagerApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2025-10-15T11:06:57.228+02:00  INFO 24888 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15T11:06:57.295+02:00  INFO 24888 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2025-10-15T11:06:58.546+02:00  INFO 24888 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-15T11:06:58.766+02:00  INFO 24888 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-10-15T11:06:58.772+02:00  INFO 24888 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-15T11:06:58.891+02:00  INFO 24888 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15T11:06:59.082+02:00  INFO 24888 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15T11:06:59.162+02:00  INFO 24888 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-15T11:06:59.524+02:00  INFO 24888 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15T11:06:59.572+02:00  WARN 24888 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15T11:06:59.586+02:00  INFO 24888 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15T11:07:00.359+02:00  INFO 24888 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15T11:07:00.401+02:00  INFO 24888 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15T11:07:01.032+02:00  INFO 24888 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15T11:07:02.605+02:00  WARN 24888 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15T11:07:02.924+02:00  INFO 24888 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-10-15T11:07:05.876+02:00  INFO 24888 --- [    Test worker] c.i.f.FilemanagerApplicationTests        : Started FilemanagerApplicationTests in 10.635 seconds (process running for 12.715)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\kilian.pineroalonso\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.17.7\fbf3d6d649ed37fc9e9c59480a05be0a26e3c2da\byte-buddy-agent-1.17.7.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

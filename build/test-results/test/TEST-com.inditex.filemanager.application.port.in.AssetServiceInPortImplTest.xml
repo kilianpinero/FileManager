@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.inditex.filemanager.application.port.in.AssetServiceInPortImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-15T09:07:06.345Z" hostname="PLX3000003534" time="0.552">
+  <properties/>
+  <testcase name="when_getAssetsByFilter_then_returnAssetsList()" classname="com.inditex.filemanager.application.port.in.AssetServiceInPortImplTest" time="0.552"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "f72c0046-cc92-4bf4-b1c3-1b8dbb1b139c",
+		"name": "File Manager Inditex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31580845"
+	},
+	"item": [
+		{
+			"name": "upload asset example 1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filename\": \"file_1.pdf\",\r\n  \"encodedFile\": \"VGhpcyBpcyBhIHNhbXBsZSBmaWxlIGNvbnRlbnQ=\", \r\n  \"contentType\": \"application/pdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/mgmt/1/assets/actions/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"mgmt",
+						"1",
+						"assets",
+						"actions",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload asset example 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filename\": \"file_2.pdf\",\r\n  \"encodedFile\": \"VGhpcyBpcyBhIHNhbXBsZSBmaWxlIGNvbnRlbnQ=\", \r\n  \"contentType\": \"application/pdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/mgmt/1/assets/actions/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"mgmt",
+						"1",
+						"assets",
+						"actions",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload asset example 3",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filename\": \"file_3.pdf\",\r\n  \"encodedFile\": \"VGhpcyBpcyBhIHNhbXBsZSBmaWxlIGNvbnRlbnQ=\", \r\n  \"contentType\": \"application/pdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/mgmt/1/assets/actions/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"mgmt",
+						"1",
+						"assets",
+						"actions",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload asset example 4",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filename\": \"file_4.pdf\",\r\n  \"encodedFile\": \"VGhpcyBpcyBhIHNhbXBsZSBmaWxlIGNvbnRlbnQ=\", \r\n  \"contentType\": \"application/pdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/mgmt/1/assets/actions/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"mgmt",
+						"1",
+						"assets",
+						"actions",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get assets",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Fecha actual\r",
+							"const today = new Date();\r",
+							"\r",
+							"// Fecha un día menos\r",
+							"const yesterday = new Date(today);\r",
+							"yesterday.setDate(yesterday.getDate() - 1);\r",
+							"\r",
+							"// Fecha un día más\r",
+							"const tomorrow = new Date(today);\r",
+							"tomorrow.setDate(tomorrow.getDate() + 1);\r",
+							"\r",
+							"// Función para obtener fecha ISO con hora 00:00:00Z\r",
+							"function toIsoStartOfDay(date) {\r",
+							"    // Crear nueva fecha con hora 00:00:00 UTC\r",
+							"    const d = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));\r",
+							"    return d.toISOString();\r",
+							"}\r",
+							"\r",
+							"// Asignar variables con formato ISO 8601\r",
+							"pm.variables.set(\"yesterday\", toIsoStartOfDay(yesterday));\r",
+							"pm.variables.set(\"tomorrow\", toIsoStartOfDay(tomorrow));"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/mgmt/1/assets/?uploadDateStart={{yesterday}}&uploadDateEnd={{tomorrow}}&filename=file&filetype=application/pdf&sortDirection=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"mgmt",
+						"1",
+						"assets",
+						""
+					],
+					"query": [
+						{
+							"key": "uploadDateStart",
+							"value": "{{yesterday}}",
+							"description": "2025-10-13T00:00:00Z"
+						},
+						{
+							"key": "uploadDateEnd",
+							"value": "{{tomorrow}}",
+							"description": "2025-10-15T00:00:00Z"
+						},
+						{
+							"key": "filename",
+							"value": "file"
+						},
+						{
+							"key": "filetype",
+							"value": "application/pdf"
+						},
+						{
+							"key": "sortDirection",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

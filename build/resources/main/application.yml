@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: filemanager
+  datasource:
+    url: jdbc:mysql://localhost:3326/filemanagerDB?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: true
+    show-sql: true
+server:
+  port: 9090
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  tracing:
+    enabled: true
