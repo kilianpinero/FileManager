@@ -12,7 +12,6 @@ import static com.inditex.filemanager.builders.entity.AssetEntityBuilder.SIZE;
 import static com.inditex.filemanager.builders.entity.AssetEntityBuilder.UPLOAD_DATE;
 import static com.inditex.filemanager.builders.entity.AssetEntityBuilder.URL;
 import static com.inditex.filemanager.builders.entity.AssetEntityBuilder.buildAssetEntityWithId;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

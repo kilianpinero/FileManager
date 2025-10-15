@@ -12,10 +12,7 @@ import java.util.List;
 import static com.inditex.filemanager.builders.entity.AssetEntityBuilder.CONTENT_TYPE;
 import static com.inditex.filemanager.builders.entity.AssetEntityBuilder.EXAMPLE_PDF;
 import static com.inditex.filemanager.builders.entity.AssetEntityBuilder.buildAssetEntity;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.verify;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 class AssetRepositoryTest {

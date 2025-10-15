@@ -75,7 +75,7 @@ public class AssetServiceInPortImpl implements AssetServiceInPort{
         return "https://inditex-external-storage.com/" + filename;
     }
 
-    private String fallbackUpload(byte[] file, String filename, Throwable t) {
+    private String fallbackUpload(byte[] file, String filename, Throwable exception) {
         return "https://inditex-backup-storage.com/" + filename;
     }
 
